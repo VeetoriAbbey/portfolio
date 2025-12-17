@@ -4,15 +4,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const float = {
-  animate: {
-    y: [0, -10, 0],
-  },
+  animate: { y: [0, -10, 0] },
   transition: {
     duration: 3,
     repeat: Infinity,
-    ease: "easeInOut",
+    ease: [0.4, 0, 0.6, 1], // ✅ FIXED
   },
 };
+
 
 export default function HeroSection() {
   return (
@@ -86,17 +85,42 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Badges */}
-            <motion.span {...float} className="absolute -top-6 left-2 bg-white px-4 py-2 rounded-full shadow font-medium text-sm">
+            <motion.span
+              animate={{ y: [0, -10, 0] }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: [0.4, 0, 0.6, 1],
+              }}
+              className="absolute -top-6 left-2 bg-white px-4 py-2 rounded-full shadow font-medium text-sm"
+            >
               🎨 UI/UX Design
             </motion.span>
 
-            <motion.span {...float} className="absolute top-24 -right-8 bg-white px-4 py-2 rounded-full shadow font-medium text-sm">
+            <motion.span
+              animate={{ y: [0, -10, 0] }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                ease: [0.4, 0, 0.6, 1],
+              }}
+              className="absolute top-24 -right-4 bg-white px-4 py-2 rounded-full shadow font-medium text-sm"
+            >
               💻 Web Design
             </motion.span>
 
-            <motion.span {...float} className="absolute bottom-10 -left-10 bg-white px-4 py-2 rounded-full shadow font-medium text-sm">
+            <motion.span
+              animate={{ y: [0, -10, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: [0.4, 0, 0.6, 1],
+              }}
+              className="absolute bottom-10 -left-4 bg-white px-4 py-2 rounded-full shadow font-medium text-sm"
+            >
               ⚡ Branding
             </motion.span>
+
           </motion.div>
         </div>
       </section>
