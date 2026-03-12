@@ -46,22 +46,6 @@ export default function HeroSection() {
               and create meaningful digital experiences.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-4">
-              <a
-                href="#contact"
-                className="px-7 py-3 rounded-full bg-[#F6B800] text-white font-semibold shadow hover:scale-105 transition"
-              >
-                Hire Me
-              </a>
-
-              <a
-                href="/resume.pdf"
-                download
-                className="px-7 py-3 rounded-full border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition"
-              >
-                Download CV
-              </a>
-            </div>
           </motion.div>
 
           {/* RIGHT IMAGE */}
